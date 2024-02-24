@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <title>Document</title>
+<style>
+    body{
+        padding-top: 60px;
+
+
+    }
+    .tr-head{
+        background: #dff0d8;
+    }
+
+</style>
+<link href="/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <div class="navbar navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="conteiner">
+                <a class="brind" href="">
+                    IDGS-803
+                </a>
+                <ul class="nav">
+                    <li class="activate">
+                    <a href="">
+                        <i class="icon-home icon-white"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <li class="icon-user icon-white"></li>
+                        Alumnos
+                    </a>
+                </li>                
+            </ul>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+    <div class="conteiner">
+        {%with messages= get_flashed_messages()%}
+        {%if messages %}
+            {%for message in messages%}
+                <div class="alert alert-succes">
+                    {{message}}
+                </div>
+                {%endfor%}
+            {%endif%}
+        {%endwith%}
+
+    
+    {%block content%}
+    
+    {%endblock%}
+    </div>
+   
+       
+
+  
+</body>
+</html>
