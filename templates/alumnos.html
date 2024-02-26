@@ -4,7 +4,7 @@
 {% import "_macros.html" as macros%}
 <h1>Alumnos</h1>
 <form action="" method="post" novalidate>
-<input type="hidden" name="csrf_token" value="{{crsf_token() }}"/>
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
 {{macros.render_field(form.nombre,class="form-controls")}}
 {{macros.render_field(form.apaterno)}}
 {{macros.render_field(form.amaterno)}}
