@@ -23,3 +23,17 @@ class UsarForm(Form):
         validators.number_range(min=1,max=20,message='valor no valido')
     ])
     correo=EmailField('email',[validators.Email(message='Ingresa un correo valido')])
+
+class UsarForm2(Form):
+    #para validar se genra una lista de validaciones, para que sea un dato requerido
+    id=IntegerField('id')
+    nombre=StringField('nombre',[
+        validators.DataRequired(message='el campo es requerido'),
+        validators.length(min=4, max=10,message='ingresa nombre valido')
+    ])
+    apaterno=StringField('apaterno',[
+        validators.DataRequired(message='el campo es requerido'),
+        validators.length(min=4, max=10,message='ingresa nombre valido')
+    ])
+   
+    email=EmailField('correo',[validators.Email(message='Ingresa un correo valido')])
